@@ -19,7 +19,7 @@ function randomPlay() {
 /*           Write Your Code Below            */
 ////////////////////////////////////////////////
 
-
+//Global variables
 
 
 var computerMove = "";
@@ -44,9 +44,7 @@ function getComputerMove(move) {
 
 function getWinner(playerMove,computerMove) {
     if (playerMove === "rock") {
-        if (computerMove === "rock") {
-          winner = "tie";
-	}
+        if (computerMove === "rock") {}
         else if (computerMove === "paper") {
             winner = "computer";
         }
@@ -99,11 +97,11 @@ function playToFive() {
         winner = getWinner(playerMove,computerMove);
 
         if (winner === "player") {
-            console.log("Player chose " + playerMove + " and computer chose " + computerMove + ". Player is the winner of this round.");
+            console.log("Player chose " + playerMove + " and computer chose " + computerMove + ". Player wins this round.");
             playerWins++;
         }
         else if (winner === "computer") {
-            console.log("Player chose " + playerMove + " and computer chose " + computerMove + ". Computer is the winner of this round.");
+            console.log("Player chose " + playerMove + " and computer chose " + computerMove + ". Computer wins this round.");
             computerWins++;
         }
         else if (winner === "tie") {
