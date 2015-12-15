@@ -94,9 +94,7 @@ function playToFive() {
     var playerWins = 0;
     var computerWins = 0;
     while (playerWins < 5 && computerWins < 5) {
-        playerMove = getPlayerMove();
-        computerMove = getComputerMove();
-        winner = getWinner(playerMove,computerMove);
+       winner = getWinner(getPlayerMove(),getComputerMove());
 
         if (winner === "player") {
             console.log("Player chose " + playerMove + " and computer chose " + computerMove + ". Player is the winner of this round.");
